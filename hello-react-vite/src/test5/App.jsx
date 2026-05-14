@@ -4,7 +4,7 @@
 // import Ex2 from './ex/Ex2';
 // import NewsList from './newsApi/NewsList';
 import { Route, Routes } from 'react-router-dom';
-import NewsPage from './newsApi/NewsPage';
+import NewsPage from './Api/NewsPage';
 
 const App = () => {
   return (
