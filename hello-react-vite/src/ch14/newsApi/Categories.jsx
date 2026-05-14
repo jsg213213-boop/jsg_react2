@@ -11,7 +11,6 @@ const categories = [
   { name: 'technology', text: '기술' },
   { name: 'busanFood', text: '부산 맛집 정보 서비스' },
   { name: 'busanTour', text: '부산 관광 정보 서비스' },
-  { name: 'animalDaejeon', text: '대전 유기동물 공고' }, // 추가
 ];
 
 const CategoriesBlock = styled.div`
@@ -27,6 +26,7 @@ const CategoriesBlock = styled.div`
   }
 `;
 
+// styled(NavLink): NavLink에 스타일 적용
 const Category = styled(NavLink)`
   font-size: 1rem;
   cursor: pointer;
@@ -41,6 +41,7 @@ const Category = styled(NavLink)`
     background: #dee2e6;
   }
 
+  /* NavLink가 active일 때 자동으로 .active 클래스 추가 */
   &.active {
     background: #007bff;
     color: white;
@@ -54,7 +55,7 @@ const Categories = () => (
       <Category
         key={c.name}
         to={c.name === 'all' ? '/' : `/${c.name}`}
-        end={c.name === 'all'}
+        end={c.name === 'all'} // / 경로는 정확히 일치할 때만 active
       >
         {c.text}
       </Category>
