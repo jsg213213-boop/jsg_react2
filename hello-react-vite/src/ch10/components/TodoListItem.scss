@@ -1,0 +1,79 @@
+// src/components/TodoListItem.scss
+.TodoListItem {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+  // 홀짝 번갈아 배경색
+  &:nth-child(even) { background: #f8f9fa; }
+
+  &:hover { background: #e9ecef; }
+
+  .checkbox {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 1.5rem;
+    }
+
+    &.checked {
+      svg   { color: #22b8cf; }  /* 체크 시 아이콘 색 */
+      .text { color: #adb5bd; text-decoration: line-through; } /* 취소선 */
+    }
+
+    .text {
+      margin-left: 0.5rem;
+      flex: 1;
+    }
+  }
+
+  .remove {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    cursor: pointer;
+
+    &:hover { color: #ff8787; }
+  }
+
+   .update {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #3024dc;
+    cursor: pointer;
+
+    &:hover { color: #1606f5; }
+  }
+
+  // 실습 7 수정 부분 css 부분, 
+  //추가, 
+  .editing {
+    cursor: pointer;
+  }
+
+  .edit-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #495057;
+  }
+
+  .save{
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .cancel {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+
+}
